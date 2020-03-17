@@ -4,4 +4,7 @@
 
     <!-- Name for slogan of earth [CHAR LIMIT=50] -->
     <string name="main_activity_image">Не будь байдужим</string>
+
+    <!-- Name for logo [CHAR LIMIT=10] -->
+    <string name="main_logo_slogan">ЕКО</string>
 </resources>
