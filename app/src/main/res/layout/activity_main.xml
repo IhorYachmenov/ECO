@@ -29,7 +29,7 @@
                 android:textSize="30dp" />
 
             <ImageView
-                android:id="@+id/imageView1"
+                android:id="@+id/main_arrow"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
@@ -45,7 +45,7 @@
         android:layout_centerVertical="true">
 
         <ImageView
-            android:id="@+id/eco_arrow"
+            android:id="@+id/eco_earth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
