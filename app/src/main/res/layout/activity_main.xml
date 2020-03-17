@@ -13,29 +13,22 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/empty_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/main_activity_image"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="30dp" />
 
-            <TextView
-                android:id="@+id/empty_title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/main_activity_image"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textSize="30dp" />
-
-            <ImageView
-                android:id="@+id/main_arrow"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/arrow_main_activity" />
-
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/main_arrow"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/arrow_main_activity" />
     </LinearLayout>
 
     <RelativeLayout
