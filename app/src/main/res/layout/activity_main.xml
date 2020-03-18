@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_on_linear_layout">
 
         <TextView
             android:id="@+id/empty_title_text"
@@ -21,14 +21,15 @@
             android:fontFamily="sans-serif-light"
             android:text="@string/main_activity_image"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="30dp" />
+            android:textSize="@dimen/text_size_main_screen" />
 
         <ImageView
             android:id="@+id/main_arrow"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/arrow_main_activity" />
+            android:src="@drawable/arrow_main_activity"
+            android:contentDescription="@string/description_of_action_image_main_screen"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -43,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/earth" />
+            android:src="@drawable/earth"
+            android:contentDescription="@string/description_of_logo_image_main_screen"/>
 
     </RelativeLayout>
 
@@ -58,6 +60,6 @@
             android:fontFamily="sans-serif-medium"
             android:text="@string/main_logo_slogan"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="30dp" />
+            android:textSize="@dimen/text_size_main_screen" />
     </RelativeLayout>
 </RelativeLayout>

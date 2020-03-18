@@ -8,9 +8,30 @@
     <!-- Name for logo [CHAR LIMIT=10] -->
     <string name="main_logo_slogan">ЕКО</string>
 
-    <!-- Description of image category [CHAR LIMIT=100] -->
+    <!-- Description of image category [CHAR LIMIT=30] -->
     <string name="image_category_description">Category image</string>
 
+    <!-- Description of first category [CHAR LIMIT=30] -->
+    <string name="first_category_description">ВСЕ ПРО ЕКОЛОГІЮ</string>
 
+    <!-- Description of second category [CHAR LIMIT=30] -->
+    <string name="second_category_description">НАВІЩО ЦЕ НАМ</string>
 
+    <!-- Description of third category [CHAR LIMIT=30] -->
+    <string name="third_category_description">ПОРАДИ ЯК БУТИ КОРИСНИМ</string>
+
+    <!-- Description of fourth category [CHAR LIMIT=30] -->
+    <string name="fourth_category_description">ЛІТЕРАТУРА</string>
+
+    <!-- Description of fifth category [CHAR LIMIT=30] -->
+    <string name="fifth_category_description">ВИДАТНІ ЕКОЛОГИ</string>
+
+    <!-- Description of sixth category [CHAR LIMIT=30] -->
+    <string name="sixth_category_description">ІНШЕ</string>
+
+    <!-- Description of logo image on main screen-->
+    <string name="description_of_logo_image_main_screen">Logo  of image</string>
+
+    <!-- Description of action image on main screen-->
+    <string name="description_of_action_image_main_screen">This is action. Press me!</string>
 </resources>

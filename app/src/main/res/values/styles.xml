@@ -6,14 +6,6 @@
         <item name="colorPrimary">#FFFFFF</item>
         <item name="colorPrimaryDark">#C4C4C6</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-
-    </style>
-
-    <!-- Hide action bar -->
-    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
     </style>
 
 </resources>
