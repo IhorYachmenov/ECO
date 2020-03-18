@@ -34,5 +34,9 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.1.0'
 
+    implementation 'com.romainpiel.shimmer:library:1.4.0@aar'
+
+    implementation 'com.github.devlight.pulseview:library:1.0.2'
+
 
 }

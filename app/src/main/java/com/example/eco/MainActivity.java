@@ -5,10 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    // Animation variable
+    private Animation pulse;
+
+    // Shimmer textView variable
+    ShimmerTextView textShimmer;
+
+    //Shimmer object variable
+    Shimmer shimmer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +45,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        // Initialize shimmer object
+        textShimmer = (ShimmerTextView) findViewById(R.id.shimmer_text_main_screen);
+        // Initialize shimmer object
+        shimmer = new Shimmer();
+        // Start shimmer animation
+        shimmer.start(textShimmer);
+
+        // Initialize ImageView object
+        ImageView leaf = (ImageView) findViewById(R.id.main_arrow);
+        // Initialize animation pulse
+        pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
+        // Start animation
+        leaf.startAnimation(pulse);
+
     }
 }
