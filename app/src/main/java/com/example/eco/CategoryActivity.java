@@ -1,20 +1,22 @@
 package com.example.eco;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
 
 public class CategoryActivity extends AppCompatActivity {
-
-    private ArrayList<String> mImageUrls = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +51,15 @@ public class CategoryActivity extends AppCompatActivity {
                 Category category = categoryResources.get(position);
             }
         });
+
+        FloatingActionButton fab = findViewById(R.id.floating_action_button);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CategoryActivity.this,"Welcome to eco-chat", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
 }

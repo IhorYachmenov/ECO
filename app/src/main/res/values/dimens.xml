@@ -10,6 +10,12 @@
     <dimen name="text_size_main_screen">30sp</dimen>
     <!-- Dimension of LineatLayout in main screen-->
     <dimen name="padding_on_linear_layout">0dp</dimen>
+    <!-- Margin of FAB in category screen-->
+    <dimen name="margin_of_FAB">20dp</dimen>
+    <!-- Size of image of FAB in category screen-->
+    <dimen name="size_of_image_of_FAB">55dp</dimen>
+    <!-- Size of FAB in category screen-->
+    <dimen name="size_of_FAB">75dp</dimen>
 
 
 </resources>
