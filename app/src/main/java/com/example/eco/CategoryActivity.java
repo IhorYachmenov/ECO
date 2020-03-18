@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
+    private ArrayList<String> mImageUrls = new ArrayList<>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +26,12 @@ public class CategoryActivity extends AppCompatActivity {
 
         // Create category
         final ArrayList<Category> categoryResources = new ArrayList<Category>();
-        categoryResources.add(new Category(R.drawable.earth, R.string.first_category_description));
-        categoryResources.add(new Category(R.drawable.earth, R.string.second_category_description));
-        categoryResources.add(new Category(R.drawable.earth, R.string.third_category_description));
-        categoryResources.add(new Category(R.drawable.earth, R.string.fourth_category_description));
-        categoryResources.add(new Category(R.drawable.earth, R.string.fifth_category_description));
-        categoryResources.add(new Category(R.drawable.earth, R.string.sixth_category_description));
+        categoryResources.add(new Category(R.drawable.about_ecology, R.string.first_category_description));
+        categoryResources.add(new Category(R.drawable.why_it_need, R.string.second_category_description));
+        categoryResources.add(new Category(R.drawable.how_i_can_help, R.string.third_category_description));
+        categoryResources.add(new Category(R.drawable.books_about_ecology, R.string.fourth_category_description));
+        categoryResources.add(new Category(R.drawable.famous_ecologists, R.string.fifth_category_description));
+        categoryResources.add(new Category(R.drawable.other, R.string.sixth_category_description));
 
         // Create an {@link CategoryAdapter}, whose data source is a list of {@link Category}s. The
         // adapter knows how to create list items for each item in the list.
@@ -48,4 +50,5 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
     }
+
 }
