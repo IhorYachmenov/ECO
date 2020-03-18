@@ -3,7 +3,6 @@ package com.example.eco;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create intent for calling "ListActivity"
-                Intent intentCatalogActivity = new Intent(MainActivity.this, ListActivity.class);
+                Intent intentCatalogActivity = new Intent(MainActivity.this, CategoryActivity.class);
                 startActivity(intentCatalogActivity);
 
             }
