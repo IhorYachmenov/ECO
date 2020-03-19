@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif-light"
+            android:paddingStart="@dimen/padding_start"
             android:text="@string/main_activity_image"
             android:textAppearance="?android:textAppearanceMedium"
             android:textSize="@dimen/text_size_main_screen" />
@@ -28,8 +29,9 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/leaf"
-            android:contentDescription="@string/description_of_action_image_main_screen"/>
+            android:contentDescription="@string/description_of_action_image_main_screen"
+            android:paddingEnd="@dimen/padding_end"
+            android:src="@drawable/leaf" />
     </LinearLayout>
 
     <RelativeLayout
@@ -43,9 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:contentDescription="@string/description_of_logo_image_main_screen"
             android:scaleType="fitCenter"
-            android:src="@drawable/earth"
-            android:contentDescription="@string/description_of_logo_image_main_screen"/>
+            android:src="@drawable/earth" />
 
     </RelativeLayout>
 

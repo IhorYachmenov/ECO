@@ -16,6 +16,10 @@
     <dimen name="size_of_image_of_FAB">55dp</dimen>
     <!-- Size of FAB in category screen-->
     <dimen name="size_of_FAB">75dp</dimen>
+    <!-- Padding of start-->
+    <dimen name="padding_start">5dp</dimen>
+    <!-- Padding of end -->
+    <dimen name="padding_end">5dp</dimen>
 
 
 </resources>
