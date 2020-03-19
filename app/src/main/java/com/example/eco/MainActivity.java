@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         // Find id of arrow
-        ImageView main_arrow = (ImageView) findViewById(R.id.main_arrow);
+        ImageView main_arrow = (ImageView) findViewById(R.id.main_leaf);
 
         // Set action of arrow button
         main_arrow.setOnClickListener(new View.OnClickListener() {
@@ -54,11 +54,18 @@ public class MainActivity extends AppCompatActivity {
         shimmer.start(textShimmer);
 
         // Initialize ImageView object
-        ImageView leaf = (ImageView) findViewById(R.id.main_arrow);
+        ImageView leaf = (ImageView) findViewById(R.id.main_leaf);
         // Initialize animation pulse
         pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
         // Start animation
         leaf.startAnimation(pulse);
+
+        // Initialize ImageView object
+        ImageView eco = (ImageView) findViewById(R.id.eco_text_logo);
+        // Initialize animation pulse
+        pulse = AnimationUtils.loadAnimation(this, R.anim.pulse_eco);
+        // Start animation
+        eco.startAnimation(pulse);
 
     }
 }
