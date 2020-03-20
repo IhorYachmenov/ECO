@@ -27,6 +27,16 @@
                 android:value=".MainActivity"/>
         </activity>
 
+        <activity
+            android:name=".AllAboutEcology"
+            android:label="Екологія"
+            android:parentActivityName=".CategoryActivity">
+            <meta-data
+                android:name="android.support.ALL_ABOUT_ECOLOGY"
+                android:value=".CategoryActivity"/>
+        </activity>
+
+
     </application>
 
 </manifest>

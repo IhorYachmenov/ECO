@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -45,10 +44,20 @@ public class CategoryActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list_of_category);
         listView.setAdapter(adapter);
 
+        // Set action for listView elements
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Category category = categoryResources.get(position);
+
+                // Set action for "ВСЕ ПРО ЕКОЛОГІЮ"
+                if (position == 0){
+
+                    Intent goToAboutEcology = new Intent(view.getContext(), AllAboutEcology.class);
+                    startActivity(goToAboutEcology);
+                }
+
+
             }
         });
 
