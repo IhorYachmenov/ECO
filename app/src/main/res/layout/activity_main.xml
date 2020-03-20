@@ -60,7 +60,9 @@
             android:id="@+id/eco_text_logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="@string/description_of_image_with_animation"
             android:fontFamily="sans-serif-medium"
             android:src="@drawable/eco_text_w" />
     </RelativeLayout>
+
 </RelativeLayout>

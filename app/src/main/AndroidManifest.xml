@@ -20,7 +20,7 @@
 
         <activity
             android:name=".CategoryActivity"
-            android:label="Category"
+            android:label="@string/all_about_ecology_label"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
