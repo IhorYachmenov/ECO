@@ -29,7 +29,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/margin_of_FAB"
-        app:srcCompat="@drawable/chat_icon"
+        app:srcCompat="@drawable/leaf_talk"
         app:maxImageSize="@dimen/size_of_image_of_FAB"/>
 
 </RelativeLayout>
