@@ -70,9 +70,16 @@ public class AllAboutEcology extends AppCompatActivity {
                     data = data + line;
                 }
 
+                JSONObject reader = new JSONObject(data);
+                JSONObject sys  = reader.getJSONObject("parse");
+                parsedData = sys.getString("text");
+                parsedData = deleteTagsFromParseData(parsedData);
+
             } catch (MalformedURLException e){
                 e.printStackTrace();
             } catch (IOException e){
+                e.printStackTrace();
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -82,7 +89,11 @@ public class AllAboutEcology extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            AllAboutEcology.data.setText(this.data);
+            AllAboutEcology.data.setText(this.parsedData);
+        }
+
+        public String deleteTagsFromParseData(String html) {
+            return Jsoup.parse(html).text();
         }
     }
 
