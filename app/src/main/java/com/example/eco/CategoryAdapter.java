@@ -46,6 +46,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 
         // Return the whole list item layout (containing 1 TextViews and an ImageView)
         // so that it can be shown in the ListView
+
         return listItemView;
     }
 }
