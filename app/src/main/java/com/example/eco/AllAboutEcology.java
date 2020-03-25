@@ -28,26 +28,15 @@ public class AllAboutEcology extends AppCompatActivity {
 
     public static TextView data;
 
-    Button click;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_about_ecology);
 
         data = (TextView) findViewById(R.id.ecology);
-        click = (Button) findViewById(R.id.get);
 
         FetchData process = new FetchData();
         process.execute();
-
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FetchData process = new FetchData();
-                process.execute();
-            }
-        });
 
     }
 
