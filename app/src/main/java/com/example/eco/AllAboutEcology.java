@@ -38,6 +38,8 @@ public class AllAboutEcology extends AppCompatActivity {
         data = (TextView) findViewById(R.id.ecology);
         click = (Button) findViewById(R.id.get);
 
+        FetchData process = new FetchData();
+        process.execute();
 
         click.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,7 @@ public class AllAboutEcology extends AppCompatActivity {
                 JSONObject sys  = reader.getJSONObject("parse");
                 parsedData = sys.getString("text");
                 parsedData = deleteTagsFromParseData(parsedData);
+                parsedData = changeText(parsedData);
 
             } catch (MalformedURLException e){
                 e.printStackTrace();
@@ -94,6 +97,56 @@ public class AllAboutEcology extends AppCompatActivity {
 
         public String deleteTagsFromParseData(String html) {
             return Jsoup.parse(html).text();
+        }
+
+        public  String changeText(String text){
+
+
+            Spanned hyperlink =  Html.fromHtml(
+                    "<a href=\"http://www.stackoverflow.com\">Сучасна екологія</a> ");
+
+            // Unnecessary data
+            String firstUnnecessaryData = "Головні розділи[ред. | ред. код] ";
+            String secondUnnecessaryData = "[уточнити]";
+            String textDescriptionOfPicture = "Через негативні зміни в екосистемі, сучасні пташки почали застосовувати «новітні матеріали» для будівництва гнізд (стільки сміття у лісах). Миколаїв, 2018.";
+
+            // Create paragraph
+            String firstParagraph = "У структурі";
+            String secondParagraph = "Загальна екологія охоплює";
+            String thirdParagraph = "Загальна екологія вивчає";
+            String fourthParagraph = "Спеціальна екологія";
+            String fifthParagraph = "Розділами спеціальної";
+            String sixthParagraph = "Прикладна екологія";
+            String seventhParagraph = "Таким чином";
+            String eighthParagraph = "Екологія є науковою ";
+
+            text = text.replace(firstUnnecessaryData,"");
+            text = text.replace(secondUnnecessaryData,"");
+            text = text.replace(textDescriptionOfPicture,"");
+
+            text = text.replace(firstParagraph,"\n \n" + firstParagraph);
+            text = text.replace(secondParagraph,"\n \n" + secondParagraph);
+            text = text.replace(thirdParagraph,"\n \n" + thirdParagraph);
+            text = text.replace(fourthParagraph,"\n \n" + fourthParagraph);
+            text = text.replace(fifthParagraph,"\n \n" + fifthParagraph);
+            text = text.replace(sixthParagraph,"\n \n" + sixthParagraph);
+            text = text.replace(seventhParagraph,"\n \n" + seventhParagraph);
+            text = text.replace(eighthParagraph,"\n \n" + eighthParagraph);
+
+            // Create list
+            text = text.replace("сільськогосподарська екологія","\n \n" + " - сільськогосподарська екологія");
+            text = text.replace("екологічний моніторинг","\n" + " - екологічний моніторинг");
+            text = text.replace("екологічна токсикологія","\n" + " - екологічна токсикологія");
+            text = text.replace("управління екосистемами","\n" + " - управління екосистемами");
+            text = text.replace("заповідна справа","\n" + " - заповідна справа");
+            text = text.replace("наукові основи охорони довкілля","\n" + " - наукові основи охорони довкілля");
+            text = text.replace("геоекологія","\n" + " - геоекологія");
+            text = text.replace("соціальна екологія","\n" + " - соціальна екологія");
+            text = text.replace("техноекологія","\n" + " - техноекологія");
+
+            // text = text.replace("Сучасна екологія",hyperlink);
+
+            return text;
         }
     }
 
