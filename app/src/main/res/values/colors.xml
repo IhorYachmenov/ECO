@@ -8,4 +8,10 @@
     <color name="backgroundTint_of_fab">#EEEEEE</color>
     <!-- ripple color of FAB -->
     <color name="ripple_of_fab">#CCFF90</color>
+
+    <!-- tint color of Retry Button -->
+    <color name="retry_tint_color">#FF067502</color>
+
+    <!-- text color of Retry Button -->
+    <color name="retry_text_color">#FFFFFF</color>
 </resources>

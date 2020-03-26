@@ -1,5 +1,9 @@
 package com.example.eco;
 
+import android.app.LoaderManager;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
@@ -7,6 +11,7 @@ import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -26,7 +31,17 @@ import java.net.URL;
 
 public class AllAboutEcology extends AppCompatActivity {
 
+    public static final String URL = "https://uk.wikipedia.org/w/api.php?action=parse&page=%D0%95%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F&prop=text&formatversion=2&format=json&section=1";
+
     public static TextView data;
+
+    public static ProgressBar progressBar;
+
+    public static TextView retryText;
+
+    public static Button retryButton;
+
+    Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,9 +49,88 @@ public class AllAboutEcology extends AppCompatActivity {
         setContentView(R.layout.all_about_ecology);
 
         data = (TextView) findViewById(R.id.ecology);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        retryText = (TextView) findViewById(R.id.retry_text);
+        retryButton = (Button) findViewById(R.id.retry_button);
 
-        FetchData process = new FetchData();
-        process.execute();
+        final FetchData process = new FetchData();
+//        process.execute();
+
+
+
+        // Get a reference to the ConnectivityManager to check state of network connectivity
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        // Get details on the currently active default data network
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+//        // If there is a network connection, fetch data
+//        if (networkInfo != null && networkInfo.isConnected()) {
+//            retryText.setVisibility(View.INVISIBLE);
+//            retryButton.setVisibility(View.INVISIBLE);
+//
+//            process.execute();
+//        } else {
+//
+//            retryText.setVisibility(View.VISIBLE);
+//
+//            retryButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    process.execute();
+//                    retryText.setVisibility(View.INVISIBLE);
+//                    retryButton.setVisibility(View.INVISIBLE);
+//
+//
+//                }
+//            });
+//        }
+
+        if (checkConnection()){
+            process.execute();
+            retryText.setVisibility(View.INVISIBLE);
+            retryButton.setVisibility(View.INVISIBLE);
+        } else {
+//            retryText.setVisibility(View.VISIBLE);
+//            retryButton.setVisibility(View.VISIBLE);
+
+            retryButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!checkConnection()) {
+                        retryText.setVisibility(View.VISIBLE);
+                        retryButton.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.INVISIBLE);
+                    } else {
+                        process.execute();
+
+                        retryText.setVisibility(View.INVISIBLE);
+                        retryButton.setVisibility(View.INVISIBLE);
+
+                    }
+                }
+            });
+        }
+
+
+    }
+
+    private Boolean checkConnection() {
+
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        // Get details on the currently active default data network
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        // If there is a network connection, fetch data
+        if (networkInfo != null && networkInfo.isConnected()) {
+           return true;
+        } else {
+            return false;
+        }
 
     }
 
@@ -49,8 +143,7 @@ public class AllAboutEcology extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                URL url = new URL(
-                        "https://uk.wikipedia.org/w/api.php?action=parse&page=%D0%95%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F&prop=text&formatversion=2&format=json&section=1");
+                URL url = new URL(URL);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -82,6 +175,13 @@ public class AllAboutEcology extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             AllAboutEcology.data.setText(this.parsedData);
+            progressBar.setVisibility(View.INVISIBLE);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
         }
 
         public String deleteTagsFromParseData(String html) {

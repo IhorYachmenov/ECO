@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FAButton" parent="Base.TextAppearance.AppCompat.Button" >
+        <item name="backgroundTint">@color/backgroundTint_of_fab</item>
+    </style>
+
 </resources>

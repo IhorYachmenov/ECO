@@ -22,7 +22,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_action_button"
         android:layout_width="wrap_content"
-        android:backgroundTint="@color/backgroundTint_of_fab"
+        style="@style/FAButton"
         app:rippleColor="@color/ripple_of_fab"
         app:fabCustomSize="@dimen/size_of_FAB"
         android:layout_height="wrap_content"

@@ -20,6 +20,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif-light"
             android:paddingStart="@dimen/padding_start"
+            android:paddingEnd="0dp"
             android:text="@string/main_activity_image"
             android:textAppearance="?android:textAppearanceMedium"
             android:textSize="@dimen/text_size_main_screen" />
@@ -31,6 +32,7 @@
             android:layout_marginBottom="10dp"
             android:contentDescription="@string/description_of_action_image_main_screen"
             android:paddingEnd="@dimen/padding_end"
+            android:paddingStart="0dp"
             android:src="@drawable/leaf" />
     </LinearLayout>
 
