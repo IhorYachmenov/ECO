@@ -54,47 +54,14 @@ public class AllAboutEcology extends AppCompatActivity {
         retryButton = (Button) findViewById(R.id.retry_button);
 
         final FetchData process = new FetchData();
-//        process.execute();
-
-
-
-        // Get a reference to the ConnectivityManager to check state of network connectivity
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        // Get details on the currently active default data network
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-
-//        // If there is a network connection, fetch data
-//        if (networkInfo != null && networkInfo.isConnected()) {
-//            retryText.setVisibility(View.INVISIBLE);
-//            retryButton.setVisibility(View.INVISIBLE);
-//
-//            process.execute();
-//        } else {
-//
-//            retryText.setVisibility(View.VISIBLE);
-//
-//            retryButton.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//                    process.execute();
-//                    retryText.setVisibility(View.INVISIBLE);
-//                    retryButton.setVisibility(View.INVISIBLE);
-//
-//
-//                }
-//            });
-//        }
 
         if (checkConnection()){
             process.execute();
             retryText.setVisibility(View.INVISIBLE);
             retryButton.setVisibility(View.INVISIBLE);
         } else {
-//            retryText.setVisibility(View.VISIBLE);
-//            retryButton.setVisibility(View.VISIBLE);
+
+            progressBar.setVisibility(View.INVISIBLE);
 
             retryButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -108,6 +75,7 @@ public class AllAboutEcology extends AppCompatActivity {
 
                         retryText.setVisibility(View.INVISIBLE);
                         retryButton.setVisibility(View.INVISIBLE);
+                        progressBar.setVisibility(View.VISIBLE);
 
                     }
                 }
