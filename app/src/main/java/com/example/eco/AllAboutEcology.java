@@ -1,6 +1,5 @@
 package com.example.eco;
 
-import android.app.LoaderManager;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -8,7 +7,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -40,8 +38,6 @@ public class AllAboutEcology extends AppCompatActivity {
     public static TextView retryText;
 
     public static Button retryButton;
-
-    Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -87,10 +83,10 @@ public class AllAboutEcology extends AppCompatActivity {
 
     private Boolean checkConnection() {
 
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         // Get details on the currently active default data network
+        assert connMgr != null;
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         // If there is a network connection, fetch data
@@ -120,6 +116,7 @@ public class AllAboutEcology extends AppCompatActivity {
                 while (line != null){
                     line = bufferedReader.readLine();
                     data = data + line;
+
                 }
 
                 JSONObject reader = new JSONObject(data);

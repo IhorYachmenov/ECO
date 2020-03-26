@@ -42,9 +42,9 @@
     <string name="description_of_image_with_animation">This is action. Press me!</string>
 
     <!-- Description of image on main screen  no internet connection-->
-    <string name="no_internet_text">No Internet connection. Make sure that Wi-Fi or mobile date is turned on, then try again</string>
+    <string name="no_internet_text">Немає підключення до Інтернету. Переконайтеся, що Wi-Fi або мобільні дані включені, а потім спробуйте ще раз.</string>
 
     <!-- Text of retry button-->
-    <string name="retry_button_text">RETRY</string>
+    <string name="retry_button_text">ПОВТОРИТИ</string>
 
 </resources>
