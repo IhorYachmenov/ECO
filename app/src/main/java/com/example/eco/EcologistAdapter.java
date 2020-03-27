@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-public class ScientistsPager extends FragmentPagerAdapter {
+public class EcologistAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    public ScientistsPager(@NonNull Context context, FragmentManager fm) {
+    public EcologistAdapter(@NonNull Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -20,7 +20,13 @@ public class ScientistsPager extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        if (position == 0) {
+            return new EcologistFragment();
+        } else if (position == 1) {
+            return new FamousEcologistFragment();
+        } else {
+            return new ListOfAllEcologistFragment();
+        }
     }
 
     @Override

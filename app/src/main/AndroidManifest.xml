@@ -38,13 +38,42 @@
                 android:name="android.support.ALL_ABOUT_ECOLOGY"
                 android:value=".CategoryActivity"/>
         </activity>
+
+        <!-- ViewPager Activities-->
         <activity
-            android:name=".Scientists"
+            android:name=".EcologistsMainActivity"
             android:label="@string/app_name"
             android:parentActivityName=".CategoryActivity">
             <meta-data
                 android:name="android.support.SCIENTISTS"
                 android:value=".CategoryActivity"/>
+        </activity>
+
+        <activity
+            android:name=".EcologistActivity"
+            android:label="@string/category_what_is_the_ecologist"
+            android:parentActivityName=".EcologistsMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EcologistsMainActivity" />
+        </activity>
+
+        <activity
+            android:name=".FamousEcologistsActivity"
+            android:label="@string/category_famous_ecologist"
+            android:parentActivityName=".EcologistsMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EcologistsMainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ListOfAllEcologistActivity"
+            android:label="@string/category_all_ecologist"
+            android:parentActivityName=".EcologistsMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EcologistsMainActivity" />
         </activity>
 
 
