@@ -49,32 +49,7 @@
                 android:value=".CategoryActivity"/>
         </activity>
 
-        <activity
-            android:name=".EcologistActivity"
-            android:label="@string/category_what_is_the_ecologist"
-            android:parentActivityName=".EcologistsMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".EcologistsMainActivity" />
-        </activity>
 
-        <activity
-            android:name=".FamousEcologistsActivity"
-            android:label="@string/category_famous_ecologist"
-            android:parentActivityName=".EcologistsMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".EcologistsMainActivity" />
-        </activity>
-
-        <activity
-            android:name=".ListOfAllEcologistActivity"
-            android:label="@string/category_all_ecologist"
-            android:parentActivityName=".EcologistsMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".EcologistsMainActivity" />
-        </activity>
 
 
     </application>
