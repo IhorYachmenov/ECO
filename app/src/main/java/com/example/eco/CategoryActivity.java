@@ -55,6 +55,22 @@ public class CategoryActivity extends AppCompatActivity {
 
                     Intent goToAboutEcology = new Intent(view.getContext(), AllAboutEcology.class);
                     startActivity(goToAboutEcology);
+                } else if (position == 1){
+
+                }
+                else if (position == 2){
+
+                }
+                else if (position == 3){
+
+                }
+                else if (position == 4){
+                    Intent goToScientists = new Intent(view.getContext(), Scientists.class);
+                    startActivity(goToScientists);
+
+                }
+                else if (position == 5){
+
                 }
 
 

@@ -47,4 +47,9 @@
     <!-- Text of retry button-->
     <string name="retry_button_text">ПОВТОРИТИ</string>
 
+    <!-- Labels if ViewPager -->
+    <string name="category_what_is_the_ecologist">Еколог?</string>
+    <string name="category_famous_ecologist">Знаменитості</string>
+    <string name="category_all_ecologist">Екологи</string>
+
 </resources>

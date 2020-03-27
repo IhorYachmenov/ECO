@@ -32,10 +32,18 @@
 
         <activity
             android:name=".AllAboutEcology"
-            android:label="Екологія"
+            android:label="@string/app_name"
             android:parentActivityName=".CategoryActivity">
             <meta-data
                 android:name="android.support.ALL_ABOUT_ECOLOGY"
+                android:value=".CategoryActivity"/>
+        </activity>
+        <activity
+            android:name=".Scientists"
+            android:label="@string/app_name"
+            android:parentActivityName=".CategoryActivity">
+            <meta-data
+                android:name="android.support.SCIENTISTS"
                 android:value=".CategoryActivity"/>
         </activity>
 
