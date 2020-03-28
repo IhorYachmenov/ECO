@@ -2,15 +2,22 @@ package com.example.eco;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
+
 import java.util.ArrayList;
 
-public class EcologistsActivity extends AppCompatActivity {
+public class EcologistsActivity extends YouTubeBaseActivity {
 
     private static final String TAG = "EcologistsActivity";
 
@@ -19,13 +26,38 @@ public class EcologistsActivity extends AppCompatActivity {
     private ArrayList<String> mDates = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
 
+    YouTubePlayerView youTubePlayerView;
+    YouTubePlayer.OnInitializedListener onInitializedListener;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scientists);
+        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.you_tube_player_view);
 
         getImages();
+
+        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
+                youTubePlayer.loadVideo("WX8LAGq0Ssw");
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+            }
+        };
+
+
+
+        youTubePlayerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                youTubePlayerView.initialize(PlayerConfig.API_KEY, onInitializedListener);
+            }
+        });
     }
 
     private void getImages(){

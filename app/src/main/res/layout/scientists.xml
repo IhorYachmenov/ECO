@@ -42,31 +42,24 @@
                 android:text="@string/part2_about_ecologists"
                 android:textSize="15sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.youtube.player.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/you_tube_player_view"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
 
 </LinearLayout>
 
-
-    <!--
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="#FF067502"
-    tools:context=".EcologistsMainActivity">
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        style="@style/CategoryTab"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabs"/>
-
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/viewpager"/>
-
-    </LinearLayout> -->

@@ -30,12 +30,12 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_below="@+id/image_view"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
-
+                android:padding="2dp"
                 android:autoSizeMaxTextSize="20sp"
                 android:autoSizeMinTextSize="15sp"
                 android:autoSizeTextType="uniform"
@@ -45,7 +45,7 @@
 
             <TextView
                 android:id="@+id/date"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_below="@+id/name"
                 android:layout_centerHorizontal="true"
