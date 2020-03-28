@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/leafbackground_without_watermark"
     android:orientation="vertical"
-    tools:context=".EcologistsActivity">
+    tools:context=".EcologistsActivity"
+    android:id="@+id/ecologist_activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,12 +49,13 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <com.google.android.youtube.player.YouTubePlayerView
+                <fragment
+                    android:id="@+id/youtube_player_fragment"
+                    android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:id="@+id/you_tube_player_view"
-                    android:layout_marginTop="10dp"
-                    android:focusable="true"/>
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/recycler_view"
+                    android:layout_below="@+id/toolbar" />
 
             </LinearLayout>
 
@@ -62,4 +64,3 @@
     </ScrollView>
 
 </LinearLayout>
-

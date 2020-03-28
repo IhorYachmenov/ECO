@@ -1,21 +1,29 @@
 package com.example.eco;
 
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.ActionMenuItemView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.android.youtube.player.YouTubeThumbnailLoader;
 
 import java.util.ArrayList;
 
-public class EcologistsActivity extends YouTubeBaseActivity {
+public class EcologistsActivity extends AppCompatActivity  {
 
     private static final String TAG = "EcologistsActivity";
 
@@ -24,38 +32,22 @@ public class EcologistsActivity extends YouTubeBaseActivity {
     private ArrayList<String> mDates = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
 
-    YouTubePlayerView youTubePlayerView;
-    YouTubePlayer.OnInitializedListener onInitializedListener;
+
+    private YouTubePlayerSupportFragment youTubePlayerFragment;
+    //youtube player to play video when new video selected
+    private YouTubePlayer youTubePlayer;
+
+    private String ID_video = "1Y0aao1w1TI";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ecologists);
-        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.you_tube_player_view);
 
         getImages();
-
-        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-
-                youTubePlayer.loadVideo("1Y0aao1w1TI");
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
-            }
-        };
+        initializeYoutubePlayer();
 
 
-
-        youTubePlayerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                youTubePlayerView.initialize(PlayerConfig.API_KEY, onInitializedListener);
-            }
-        });
     }
 
     private void getImages(){
@@ -110,6 +102,39 @@ public class EcologistsActivity extends YouTubeBaseActivity {
         recyclerView.setLayoutManager(layoutManager);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls, mDates);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void initializeYoutubePlayer() {
+
+        youTubePlayerFragment = (YouTubePlayerSupportFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.youtube_player_fragment);
+
+        if (youTubePlayerFragment == null)
+            return;
+
+        youTubePlayerFragment.initialize(PlayerConfig.API_KEY, new YouTubePlayer.OnInitializedListener() {
+
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player,
+                                                boolean wasRestored) {
+                if (!wasRestored) {
+                    youTubePlayer = player;
+
+                    //set the player style default
+                    youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+
+                    //cue the 1st video by default
+                    youTubePlayer.cueVideo(ID_video);
+                }
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider arg0, YouTubeInitializationResult arg1) {
+
+                //print or show error if initialization failed
+                Log.e(TAG, "Youtube Player View initialization failed");
+            }
+        });
     }
 
 }

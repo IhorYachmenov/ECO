@@ -44,6 +44,7 @@ public class AllAboutEcology extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_about_ecology);
 
+
         data = (TextView) findViewById(R.id.ecology);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         retryText = (TextView) findViewById(R.id.retry_text);
