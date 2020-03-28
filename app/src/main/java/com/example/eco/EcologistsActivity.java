@@ -31,42 +31,42 @@ public class EcologistsActivity extends AppCompatActivity {
     private void getImages(){
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
-        mNames.add("Havasu Falls");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/uk/2/21/Stanislav_Shwarts.jpg");
+        mNames.add("Шварц Станіслав Семенович");
+        mDates.add("1918-1976");
 
-        mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
-        mNames.add("Trondheim");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ivan_Borodin_-_il103.jpg/250px-Ivan_Borodin_-_il103.jpg");
+        mNames.add("Бородін Іван Парфенійович");
+        mDates.add("1847-1930");
 
-        mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
-        mNames.add("Portugal");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ernst_Haeckel_1860.jpg/250px-Ernst_Haeckel_1860.jpg");
+        mNames.add("Ернст Геккель");
+        mDates.add("1834-1919");
 
-        mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
-        mNames.add("Rocky Mountain National Park");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Karl_August_M%C3%B6bius_%281825-1908%29.jpg/250px-Karl_August_M%C3%B6bius_%281825-1908%29.jpg");
+        mNames.add("Карл Август Мебіус");
+        mDates.add("1825-1908");
 
 
-        mImageUrls.add("https://i.redd.it/0h2gm1ix6p501.jpg");
-        mNames.add("Mahahual");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Ramensky-Leonty_1884-1953.jpg/234px-Ramensky-Leonty_1884-1953.jpg");
+        mNames.add("Раменский, Леонтий Григорьевич");
+        mDates.add("1884-1953");
 
-        mImageUrls.add("https://i.redd.it/k98uzl68eh501.jpg");
-        mNames.add("Frozen Lake");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/ru/thumb/b/be/NF_Reimers.jpg/220px-NF_Reimers.jpg");
+        mNames.add("Реймерс Микола Федорович");
+        mDates.add("1931-1993");
 
-        mImageUrls.add("https://i.redd.it/glin0nwndo501.jpg");
-        mNames.add("White Sands Desert");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/uk/thumb/d/da/Suduk_Olena_4668.JPG/225px-Suduk_Olena_4668.JPG");
+        mNames.add("Судук Олена Юріївна");
+        mDates.add("1977");
 
-        mImageUrls.add("https://i.redd.it/obx4zydshg601.jpg");
-        mNames.add("Austrailia");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/uk/thumb/b/b6/Zhyla_u_Sagajdaka_1-02-2015_crop.jpg/225px-Zhyla_u_Sagajdaka_1-02-2015_crop.jpg");
+        mNames.add("Жила Сергій Миколайович");
+        mDates.add("1959");
 
-        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
-        mNames.add("Washington");
-        mDates.add("1888");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/%D0%A2%D1%83%D0%BD%D0%B8%D1%86%D1%8F_%D0%AE%D1%80%D1%96%D0%B9_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87.png/225px-%D0%A2%D1%83%D0%BD%D0%B8%D1%86%D1%8F_%D0%AE%D1%80%D1%96%D0%B9_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87.png");
+        mNames.add("Туниця Юрій Юрійович");
+        mDates.add("1941");
 
         initRecyclerView();
 
