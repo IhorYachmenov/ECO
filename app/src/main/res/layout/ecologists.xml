@@ -53,7 +53,7 @@
                     android:layout_height="250dp"
                     android:id="@+id/you_tube_player_view"
                     android:layout_marginTop="10dp"
-                    android:padding="5dp"/>
+                    android:focusable="true"/>
 
             </LinearLayout>
 

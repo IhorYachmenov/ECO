@@ -3,10 +3,8 @@ package com.example.eco;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +30,7 @@ public class EcologistsActivity extends YouTubeBaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.scientists);
+        setContentView(R.layout.ecologists);
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.you_tube_player_view);
 
         getImages();
@@ -41,7 +39,7 @@ public class EcologistsActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
-                youTubePlayer.loadVideo("WX8LAGq0Ssw");
+                youTubePlayer.loadVideo("1Y0aao1w1TI");
             }
 
             @Override
