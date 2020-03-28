@@ -23,11 +23,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<String> mDates = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> names, ArrayList<String> imageUrls) {
+    public RecyclerViewAdapter(Context context, ArrayList<String> names, ArrayList<String> imageUrls, ArrayList<String> dates) {
         mNames = names;
+        mDates = dates;
         mImageUrls = imageUrls;
         mContext = context;
     }
@@ -48,6 +50,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .into(holder.image);
 
         holder.name.setText(mNames.get(position));
+        holder.date.setText(mDates.get(position));
+
 
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,11 +71,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         CircleImageView image;
         TextView name;
+        TextView date;
 
         public ViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image_view);
             name = itemView.findViewById(R.id.name);
+            date = itemView.findViewById(R.id.date);
         }
     }
 }
