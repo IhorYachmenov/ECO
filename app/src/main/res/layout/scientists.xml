@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/leafbackground_without_watermark"
     android:orientation="vertical"
-    tools:context=".EcologistsMainActivity">
+    tools:context=".EcologistsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,15 +25,10 @@
                 android:text="@string/part1_about_ecologists"
                 android:textSize="15sp" />
 
-            <ListView
-                android:id="@+id/list_of_ecologists"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" />
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/recycleview"
+                android:id="@+id/recyclerView"
                 android:orientation="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>

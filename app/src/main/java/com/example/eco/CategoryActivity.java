@@ -65,7 +65,7 @@ public class CategoryActivity extends AppCompatActivity {
 
                 }
                 else if (position == 4){
-                    Intent goToScientists = new Intent(view.getContext(), EcologistsMainActivity.class);
+                    Intent goToScientists = new Intent(view.getContext(), EcologistsActivity.class);
                     startActivity(goToScientists);
 
                 }

@@ -41,7 +41,7 @@
 
         <!-- ViewPager Activities-->
         <activity
-            android:name=".EcologistsMainActivity"
+            android:name=".EcologistsActivity"
             android:label="@string/app_name"
             android:parentActivityName=".CategoryActivity">
             <meta-data
