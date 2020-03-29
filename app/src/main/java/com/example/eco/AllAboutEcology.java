@@ -1,10 +1,13 @@
 package com.example.eco;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
@@ -26,10 +29,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Random;
 
 public class AllAboutEcology extends AppCompatActivity {
 
     public static final String URL = "https://uk.wikipedia.org/w/api.php?action=parse&page=%D0%95%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F&prop=text&formatversion=2&format=json&section=1";
+    private static final String URL_WebSite = "https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F";
 
     public static TextView data;
 
@@ -38,6 +43,8 @@ public class AllAboutEcology extends AppCompatActivity {
     public static TextView retryText;
 
     public static Button retryButton;
+
+    public static Button moreInfo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +56,7 @@ public class AllAboutEcology extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         retryText = (TextView) findViewById(R.id.retry_text);
         retryButton = (Button) findViewById(R.id.retry_button);
+        moreInfo = (Button) findViewById(R.id.button_more_info);
 
         final FetchData process = new FetchData();
 
@@ -56,6 +64,7 @@ public class AllAboutEcology extends AppCompatActivity {
             process.execute();
             retryText.setVisibility(View.INVISIBLE);
             retryButton.setVisibility(View.INVISIBLE);
+            appearingMoreButton();
         } else {
 
             progressBar.setVisibility(View.INVISIBLE);
@@ -67,18 +76,46 @@ public class AllAboutEcology extends AppCompatActivity {
                         retryText.setVisibility(View.VISIBLE);
                         retryButton.setVisibility(View.VISIBLE);
                         progressBar.setVisibility(View.INVISIBLE);
+                        moreInfo.setVisibility(View.INVISIBLE);
                     } else {
                         process.execute();
 
                         retryText.setVisibility(View.INVISIBLE);
                         retryButton.setVisibility(View.INVISIBLE);
                         progressBar.setVisibility(View.VISIBLE);
+                        appearingMoreButton();
 
                     }
                 }
             });
         }
 
+        moreInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Convert the String URL into a URI object (to pass into the Intent constructor)
+                Uri wikiUri = Uri.parse(URL_WebSite);
+                // Create a new intent to view the earthquake URI
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, wikiUri);
+                startActivity(websiteIntent);
+            }
+        });
+
+
+
+    }
+
+
+    private void appearingMoreButton() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                moreInfo.setVisibility(View.VISIBLE);
+            }
+        }, 2000);
 
     }
 
@@ -98,6 +135,7 @@ public class AllAboutEcology extends AppCompatActivity {
         }
 
     }
+
 
     private class FetchData extends AsyncTask<Void, Void, Void> {
 

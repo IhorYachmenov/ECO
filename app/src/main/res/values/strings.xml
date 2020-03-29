@@ -47,6 +47,9 @@
     <!-- Text of retry button-->
     <string name="retry_button_text">ПОВТОРИТИ</string>
 
+    <!-- Text of more button-->
+    <string name="more_button_text">Детальніше</string>
+
     <!-- Labels if ViewPager -->
     <string name="category_what_is_the_ecologist">Еколог?</string>
     <string name="category_famous_ecologist">Знаменитості</string>
