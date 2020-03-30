@@ -1,4 +1,4 @@
-package com.example.eco;
+package com.example.eco.main_category;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.eco.R;
+import com.example.eco.all_about_ecology.AllAboutEcology;
+import com.example.eco.ecologists.EcologistsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

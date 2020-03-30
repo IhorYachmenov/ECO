@@ -1,4 +1,4 @@
-package com.example.eco;
+package com.example.eco.ecologists;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.eco.R;
 
 import java.util.ArrayList;
 

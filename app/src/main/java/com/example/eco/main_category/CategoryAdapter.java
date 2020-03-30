@@ -1,4 +1,4 @@
-package com.example.eco;
+package com.example.eco.main_category;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.eco.R;
+import com.example.eco.main_category.Category;
 
 import java.util.ArrayList;
 

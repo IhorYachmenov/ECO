@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="1dp"
-    tools:context="com.example.eco.EcologistsActivity">
+    tools:context="com.example.eco.ecologists.EcologistsActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="280dp"

@@ -1,4 +1,4 @@
-package com.example.eco;
+package com.example.eco.main_category;
 
 
 public class Category {

@@ -1,4 +1,4 @@
-package com.example.eco;
+package com.example.eco.ecologists;
 
 public class PlayerConfig {
 

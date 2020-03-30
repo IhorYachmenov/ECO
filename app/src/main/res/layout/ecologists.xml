@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/leafbackground_without_watermark"
     android:orientation="vertical"
-    tools:context=".EcologistsActivity"
+    tools:context=".ecologists.EcologistsActivity"
     android:id="@+id/ecologist_activity">
 
     <ScrollView
