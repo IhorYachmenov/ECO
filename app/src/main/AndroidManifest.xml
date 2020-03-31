@@ -49,6 +49,26 @@
                 android:value=".CategoryActivity"/>
         </activity>
 
+        <!-- Chat Activities -->
+
+        <activity
+        android:name=".chat_button.SignInActivity"
+        android:label="@string/app_name"
+        android:parentActivityName=".main_category.CategoryActivity">
+        <meta-data
+            android:name="android.support.SCIENTISTS"
+            android:value=".CategoryActivity"/>
+    </activity>
+
+        <activity
+            android:name=".chat_button.MainActivityChat"
+            android:label="@string/app_name"
+            android:parentActivityName=".main_category.CategoryActivity">
+            <meta-data
+                android:name="android.support.SCIENTISTS"
+                android:value=".CategoryActivity"/>
+        </activity>
+
 
 
 

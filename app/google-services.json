@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "420811536659",
+    "firebase_url": "https://eco-application-chat.firebaseio.com",
+    "project_id": "eco-application-chat",
+    "storage_bucket": "eco-application-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420811536659:android:083079c1bbce01db2582e6",
+        "android_client_info": {
+          "package_name": "com.example.eco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420811536659-40s6ujrlaf948buvavkmj15d437lvlk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eco",
+            "certificate_hash": "a12dd8a4c15334d2c7beaeef0823794e88df646f"
+          }
+        },
+        {
+          "client_id": "420811536659-0nqfoakv15krgbna24hk347ap04m8bo3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEBImNCFNXfbgbnHCE49ceq7-rZC_GGM"
+        },
+        {
+          "current_key": "AIzaSyDqFZUkeSf1IEQVGkZnwv2T9BWDYNsZvcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420811536659-0nqfoakv15krgbna24hk347ap04m8bo3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420811536659:android:78335f2b1843291c2582e6",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420811536659-dkjv48f5766qg4mtmk28fof56b114hf1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.friendlychat",
+            "certificate_hash": "a12dd8a4c15334d2c7beaeef0823794e88df646f"
+          }
+        },
+        {
+          "client_id": "420811536659-0nqfoakv15krgbna24hk347ap04m8bo3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEBImNCFNXfbgbnHCE49ceq7-rZC_GGM"
+        },
+        {
+          "current_key": "AIzaSyDqFZUkeSf1IEQVGkZnwv2T9BWDYNsZvcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420811536659-0nqfoakv15krgbna24hk347ap04m8bo3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

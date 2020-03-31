@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.eco.R;
 import com.example.eco.all_about_ecology.AllAboutEcology;
+import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -85,6 +86,8 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CategoryActivity.this,"Welcome to eco-chat", Toast.LENGTH_SHORT).show();
+                Intent goToEcoChat = new Intent(view.getContext(), SignInActivity.class);
+                startActivity(goToEcoChat);
             }
         });
 
