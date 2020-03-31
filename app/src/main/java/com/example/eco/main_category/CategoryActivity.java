@@ -14,6 +14,7 @@ import com.example.eco.R;
 import com.example.eco.all_about_ecology.AllAboutEcology;
 import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -74,7 +75,8 @@ public class CategoryActivity extends AppCompatActivity {
 
                 }
                 else if (position == 5){
-
+//                    Intent goToNotes = new Intent(view.getContext(), MainActivityNotes.class);
+//                    startActivity(goToNotes);
                 }
 
 
@@ -85,7 +87,8 @@ public class CategoryActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(CategoryActivity.this,"Welcome to eco-chat", Toast.LENGTH_SHORT).show();
+                String toast = getResources().getString(R.string.fab_text);
+                Toast.makeText(CategoryActivity.this, toast, Toast.LENGTH_SHORT).show();
                 Intent goToEcoChat = new Intent(view.getContext(), SignInActivity.class);
                 startActivity(goToEcoChat);
             }

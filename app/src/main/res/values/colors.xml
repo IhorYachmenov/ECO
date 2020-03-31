@@ -14,4 +14,7 @@
 
     <!-- text color of Retry Button -->
     <color name="retry_text_color">#FFFFFF</color>
+
+    <color name="colorSecondaryTex">#ffffff</color>
+    <color name="green">#4CAF50</color>
 </resources>
