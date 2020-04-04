@@ -1,6 +1,8 @@
 package com.example.eco.main_category;
 
+import android.content.ContentUris;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +17,9 @@ import com.example.eco.all_about_ecology.AllAboutEcology;
 import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
 
+import com.example.eco.other.ListOfNotesActivity;
+import com.example.eco.other.NotesActivity;
+import com.example.eco.other.NotesContract;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -75,8 +80,14 @@ public class CategoryActivity extends AppCompatActivity {
 
                 }
                 else if (position == 5){
-//                    Intent goToNotes = new Intent(view.getContext(), MainActivityNotes.class);
-//                    startActivity(goToNotes);
+                    Intent goToNotes = new Intent(view.getContext(), ListOfNotesActivity.class);
+                    startActivity(goToNotes);
+//                    Intent click = new Intent(view.getContext(), NotesActivity.class);
+//                    Uri currentPetUri = ContentUris.withAppendedId(NotesContract.NotesEntry.CONTENT_URI, id);
+//
+//                    // Set the URI on the data field of the intent
+//                    click.setData(currentPetUri);
+//                    startActivity(click);
                 }
 
 
