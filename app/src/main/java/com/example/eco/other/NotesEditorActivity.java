@@ -7,18 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 
 import com.example.eco.R;
 import com.example.eco.other.data.DBOpenHelper;
@@ -39,33 +34,10 @@ public class NotesEditorActivity extends AppCompatActivity {
     private String noteFilter;  // the where clause used in SQL statements to query a specific note
     private String oldText; // the existing text of a note before displaying it to the user
 
-
-    private Button share;
-    private Button delete;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //setContentView(R.layout.activity_editor_notes);
-        setContentView(R.layout.activity_editor_test);
-
-//        share = findViewById(R.id.action_share_note);
-//        share.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                shareNote();
-//            }
-//        });
-//        delete = findViewById(R.id.action_delete_note);
-//        delete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                deleteNote();
-//            }
-//        });
-
-
+        setContentView(R.layout.activity_editor_notes);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         editor = findViewById(R.id.noteEditText);
@@ -79,14 +51,10 @@ public class NotesEditorActivity extends AppCompatActivity {
             action = Intent.ACTION_INSERT;
             setTitle(getString(R.string.editor_title_insert_new_note));
 
-          //  editor.requestFocus();
-           // bottomBar.setVisibility(View.GONE);  // completely hide the bottomBar and all its contents
-
         } else {   // opened for edit note
 
             action = Intent.ACTION_EDIT;
             setTitle(getString(R.string.editor_title_edit_note));
-//            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);  // disable keyboard popup automatically
 
             noteFilter = DBOpenHelper.NOTE_ID + "=" + uri.getLastPathSegment();
             Cursor cursor = getContentResolver().query(uri, DBOpenHelper.ALL_COLUMNS, noteFilter, null, null);

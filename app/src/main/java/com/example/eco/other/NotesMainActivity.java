@@ -19,8 +19,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.cursoradapter.widget.CursorAdapter;
-
 import com.example.eco.R;
 import com.example.eco.other.adapters.NotesCursorAdapter;
 import com.example.eco.other.data.NotesProvider;
@@ -35,10 +33,8 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_all_notes_main);
-        setContentView(R.layout.activity_notes_test);
+        setContentView(R.layout.activity_main_notes);
 
-        //setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,9 +44,7 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
             }
         });
 
-//        String[] from = {DBOpenHelper.NOTE_TEXT};
-//        int[] to = {R.id.noteTextView};
-//        cursorAdapter = new SimpleCursorAdapter(this, R.layout.note_list_item, null, from, to, 0);
+
         cursorAdapter = new NotesCursorAdapter(this, null, 0);  // used to add more customization the list items
         ListView notesListView = findViewById(R.id.notesListView);
         notesListView.setAdapter(cursorAdapter);
@@ -200,21 +194,5 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
         cursorAdapter.swapCursor(null);
     }
 
-
-    /*---------------- Used for testing only -----------------*/
-//    private void insertNote(String noteText) {
-//        ContentValues contentValues = new ContentValues();
-//        contentValues.put(DBOpenHelper.NOTE_TEXT, noteText);
-//        Uri noteUri = getContentResolver().insert(NotesProvider.CONTENT_URI, contentValues);
-////        Log.d(TAG, "Inserted note: " + noteUri.getLastPathSegment());
-//    }
-//
-//    private void insertSampleData() {
-//        insertNote("Simple note.");
-//        insertNote("Multi-line\nnote.");
-//        insertNote("Very long note with a lot of text that exceeds the width of the screen.");
-//
-//        restartLoader();
-//    }
 
 }

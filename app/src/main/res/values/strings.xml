@@ -79,7 +79,6 @@
         державних структурах і суді. Потрібно аргументовано доводити серйозність ситуації, адже розмова ведеться з професіоналами, на рівні висновків та експертиз.
         Тут важливі лише факти.</string>
 
-
     <!-- Chat resources -->
 
     <string name="welcome_msg">Ласкаво просимо!</string>
@@ -99,66 +98,21 @@
 
     <!-- Notes( section other ) resources -->
 
-    <!-- Toast message in editor when new text has been successfully inserted [CHAR LIMIT=NONE] -->
-    <string name="editor_insert_text_successful">Text saved</string>
-
-    <!-- Toast message in editor when new text has failed to be inserted [CHAR LIMIT=NONE] -->
-    <string name="editor_insert_text_failed">Error with saving text</string>
-
-    <!-- Toast message in editor when current pet was successfully updated [CHAR LIMIT=NONE] -->
-    <string name="editor_update_text_successful">Text updated</string>
-
-    <!-- Toast message in editor when current pet has failed to be updated [CHAR LIMIT=NONE] -->
-    <string name="editor_update_text_failed">Error with updating text</string>
-
-    <!-- Dialog message to ask the user to confirm deleting the current text [CHAR LIMIT=NONE] -->
-    <string name="delete_dialog_msg">Delete this text?</string>
-
-    <!-- Dialog button text for the option to confirm deleting the current text [CHAR LIMIT=20] -->
-    <string name="delete">Delete</string>
-
-    <!-- Dialog button text for the option to cancel deletion of the current text [CHAR LIMIT=20] -->
-    <string name="cancel">Cancel</string>
-
-    <!-- Toast message in editor when current text was successfully deleted [CHAR LIMIT=NONE] -->
-    <string name="editor_delete_text_successful">Text deleted</string>
-
-    <!-- Toast message in editor when current pet has failed to be deleted [CHAR LIMIT=NONE] -->
-    <string name="editor_delete_text_failed">Error with deleting text</string>
-
-    <!-- Title for the activity to edit an existing pet [CHAR LIMIT=20] -->
-    <string name="editor_activity_title_edit_pet">Edit Pet</string>
-
-    <string name="no_notes_to_delete_message">There\'re no notes to delete</string>
+    <string name="no_notes_to_delete_message">Немає приміток для видалення</string>
     <string name="all_notes_deleted_message">Всі нотатки видалені</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Ви впевнені?</string>
     <string name="editor_title_insert_new_note">Нова нотатка</string>
     <string name="editor_title_edit_note">Редагування</string>
     <string name="note_updated_message">Нотатка оновлена</string>
     <string name="note_deleted_message">Нотатка видалена</string>
-    <string name="action_delete_note">Delete note</string>
-    <string name="action_share_note">Share note</string>
+    <string name="action_delete_note">Видалити нотатку</string>
+    <string name="action_share_note">Поділитися нотаткою</string>
     <string name="action_delete_all_notes">Видалити всі нотатки</string>
-    <string name="action_about">About</string>
     <string name="no_notes_msg">Немає жодних приміток для відображення.\n Почніть додавати їх, натиснувши \'+\' кнопку нижче.</string>
-
     <style name="note_dummy_text">Ваша нотатка</style>
-
-    <string name="app_description">A simple &amp; open source note-taking app.</string>
-    <string name="app_version_name">Version %1$s</string>
-    <string name="view_on_github_button_text">View app on Github</string>
-    <string name="share_app_fab_content_description">Share the app with a friend</string>
-
-    <string name="github_repo_url" translatable="false">https://github.com/Abdallah-Abdelazim/MyNotes</string>
-    <string name="playstore_url" translatable="false">https://play.google.com/store/apps/details?id=com.aa.mynotes</string>
-
-    <string name="share_app_subject">I recommend you to try this great app: %s</string>
-    <string name="share_app_text">%1$s: %2$s Install it from: %3$s\n</string>
-    <string name="share_app_chooser_dialog_title">Share the app with a friend</string>
     <string name="note_edit_text_hint">Введіть тут свою нотатку</string>
     <string name="last_edited_text_view">Останнє редагування:</string>
     <string name="dummy_date" translatable="false">yyyy-MM-dd HH:mm:ss</string>
     <string name="share_note_chooser_dialog_title">Поділитися нотаткою за допомогою</string>
-
 
 </resources>
