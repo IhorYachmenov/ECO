@@ -35,7 +35,6 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_notes);
 
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +42,6 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
                 openEditorForNewNote();
             }
         });
-
 
         cursorAdapter = new NotesCursorAdapter(this, null, 0);  // used to add more customization the list items
         ListView notesListView = findViewById(R.id.notesListView);
