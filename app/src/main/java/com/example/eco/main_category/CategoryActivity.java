@@ -17,9 +17,8 @@ import com.example.eco.all_about_ecology.AllAboutEcology;
 import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
 
-import com.example.eco.other.ListOfNotesActivity;
-import com.example.eco.other.NotesActivity;
-import com.example.eco.other.NotesContract;
+
+import com.example.eco.other.NotesMain;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -62,9 +61,8 @@ public class CategoryActivity extends AppCompatActivity {
 
                 // Set action for "ВСЕ ПРО ЕКОЛОГІЮ"
                 if (position == 0){
-
-                    Intent goToAboutEcology = new Intent(view.getContext(), AllAboutEcology.class);
-                    startActivity(goToAboutEcology);
+                    Intent ecologyActivity = new Intent(view.getContext(), AllAboutEcology.class);
+                    startActivity(ecologyActivity);
                 } else if (position == 1){
 
                 }
@@ -75,19 +73,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                 }
                 else if (position == 4){
-                    Intent goToScientists = new Intent(view.getContext(), EcologistsActivity.class);
-                    startActivity(goToScientists);
+                    Intent scientistsActivity = new Intent(view.getContext(), EcologistsActivity.class);
+                    startActivity(scientistsActivity);
 
                 }
                 else if (position == 5){
-                    Intent goToNotes = new Intent(view.getContext(), ListOfNotesActivity.class);
-                    startActivity(goToNotes);
-//                    Intent click = new Intent(view.getContext(), NotesActivity.class);
-//                    Uri currentPetUri = ContentUris.withAppendedId(NotesContract.NotesEntry.CONTENT_URI, id);
-//
-//                    // Set the URI on the data field of the intent
-//                    click.setData(currentPetUri);
-//                    startActivity(click);
+                    Intent notesActivity = new Intent(view.getContext(), NotesMain.class);
+                    startActivity(notesActivity);
                 }
 
 
