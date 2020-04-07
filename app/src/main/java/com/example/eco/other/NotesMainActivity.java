@@ -35,7 +35,8 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_notes_main);
+        //setContentView(R.layout.activity_all_notes_main);
+        setContentView(R.layout.activity_notes_test);
 
         //setSupportActionBar(toolbar);
 
@@ -102,9 +103,7 @@ public class NotesMainActivity extends AppCompatActivity implements LoaderManage
                     deleteAllNotes();
                 }
                 return true;
-            case R.id.action_about:
-                startActivity(new Intent(this, NotesAboutActivity.class));
-                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

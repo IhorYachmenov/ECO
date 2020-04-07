@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,11 +40,30 @@ public class NotesEditorActivity extends AppCompatActivity {
     private String oldText; // the existing text of a note before displaying it to the user
 
 
+    private Button share;
+    private Button delete;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_editor_notes);
+
+        //setContentView(R.layout.activity_editor_notes);
+        setContentView(R.layout.activity_editor_test);
+
+//        share = findViewById(R.id.action_share_note);
+//        share.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                shareNote();
+//            }
+//        });
+//        delete = findViewById(R.id.action_delete_note);
+//        delete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                deleteNote();
+//            }
+//        });
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -59,8 +79,8 @@ public class NotesEditorActivity extends AppCompatActivity {
             action = Intent.ACTION_INSERT;
             setTitle(getString(R.string.editor_title_insert_new_note));
 
-            editor.requestFocus();
-            bottomBar.setVisibility(View.GONE);  // completely hide the bottomBar and all its contents
+          //  editor.requestFocus();
+           // bottomBar.setVisibility(View.GONE);  // completely hide the bottomBar and all its contents
 
         } else {   // opened for edit note
 
