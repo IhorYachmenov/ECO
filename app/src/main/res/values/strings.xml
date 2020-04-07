@@ -130,19 +130,19 @@
     <string name="editor_activity_title_edit_pet">Edit Pet</string>
 
     <string name="no_notes_to_delete_message">There\'re no notes to delete</string>
-    <string name="all_notes_deleted_message">All notes deleted</string>
+    <string name="all_notes_deleted_message">Всі нотатки видалені</string>
     <string name="are_you_sure">Are you sure?</string>
-    <string name="editor_title_insert_new_note">New note</string>
-    <string name="editor_title_edit_note">Note editor</string>
-    <string name="note_updated_message">Note updated</string>
-    <string name="note_deleted_message">Note deleted</string>
+    <string name="editor_title_insert_new_note">Нова нотатка</string>
+    <string name="editor_title_edit_note">Редагування</string>
+    <string name="note_updated_message">Нотатка оновлена</string>
+    <string name="note_deleted_message">Нотатка видалена</string>
     <string name="action_delete_note">Delete note</string>
     <string name="action_share_note">Share note</string>
-    <string name="action_delete_all_notes">Delete all notes</string>
+    <string name="action_delete_all_notes">Видалити всі нотатки</string>
     <string name="action_about">About</string>
-    <string name="no_notes_msg">There\'re no notes to display.\n Start adding some by pressing \'+\' button below.</string>
+    <string name="no_notes_msg">Немає жодних приміток для відображення.\n Почніть додавати їх, натиснувши \'+\' кнопку нижче.</string>
 
-    <style name="note_dummy_text">some message</style>
+    <style name="note_dummy_text">Ваша нотатка</style>
 
     <string name="app_description">A simple &amp; open source note-taking app.</string>
     <string name="app_version_name">Version %1$s</string>
@@ -155,10 +155,10 @@
     <string name="share_app_subject">I recommend you to try this great app: %s</string>
     <string name="share_app_text">%1$s: %2$s Install it from: %3$s\n</string>
     <string name="share_app_chooser_dialog_title">Share the app with a friend</string>
-    <string name="note_edit_text_hint">Enter your note here</string>
-    <string name="last_edited_text_view">Last edited:</string>
+    <string name="note_edit_text_hint">Введіть тут свою нотатку</string>
+    <string name="last_edited_text_view">Останнє редагування:</string>
     <string name="dummy_date" translatable="false">yyyy-MM-dd HH:mm:ss</string>
-    <string name="share_note_chooser_dialog_title">Share note using</string>
+    <string name="share_note_chooser_dialog_title">Поділитися нотаткою за допомогою</string>
 
 
 </resources>
