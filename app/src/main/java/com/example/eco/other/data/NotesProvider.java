@@ -56,13 +56,6 @@ public class NotesProvider extends ContentProvider {
     public boolean onCreate() {
         DBOpenHelper DBHelper = new DBOpenHelper(getContext());
         database = DBHelper.getWritableDatabase();
-
-
-        for (int i=0; i <= 100; i++){
-            System.out.println(CONTENT_URI);
-        }
-
-
         return true;
     }
 
