@@ -112,7 +112,7 @@
     <style name="note_dummy_text">Ваша нотатка</style>
     <string name="note_edit_text_hint">Введіть тут свою нотатку</string>
     <string name="last_edited_text_view">Останнє редагування:</string>
-    <string name="dummy_date" translatable="false">yyyy-MM-dd HH:mm:ss</string>
-    <string name="share_note_chooser_dialog_title">Поділитися нотаткою за допомогою</string>
+    <string name="dummy_date" translatable="false">День-Рік-Місяць-Година</string>
+     <string name="share_note_chooser_dialog_title">Поділитися нотаткою за допомогою</string>
 
 </resources>
