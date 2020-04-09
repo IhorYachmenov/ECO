@@ -89,11 +89,19 @@
             android:name=".other.NotesEditorActivity"
             android:label="@string/app_name"
             android:parentActivityName=".other.NotesMainActivity">
-        <meta-data
-            android:name="android.support.SCIENTISTS"
-            android:value=".CategoryActivity" />
+            <meta-data
+                android:name="android.support.SCIENTISTS"
+                android:value=".CategoryActivity" />
         </activity>
 
+        <!-- Books Activities -->
+
+        <activity
+            android:name=".book.BookMainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".main_category.CategoryActivity">
+
+        </activity>
 
 
     </application>

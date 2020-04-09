@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.eco.R;
 import com.example.eco.all_about_ecology.AllAboutEcology;
+import com.example.eco.book.BookMainActivity;
 import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
 
@@ -68,7 +69,8 @@ public class CategoryActivity extends AppCompatActivity {
 
                 }
                 else if (position == 3){
-
+                    Intent booksActivity = new Intent(view.getContext(), BookMainActivity.class);
+                    startActivity(booksActivity);
                 }
                 else if (position == 4){
                     Intent scientistsActivity = new Intent(view.getContext(), EcologistsActivity.class);
