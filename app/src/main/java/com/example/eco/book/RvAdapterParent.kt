@@ -3,12 +3,17 @@ package com.example.eco.book
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eco.R
+import kotlinx.android.synthetic.main.parent_recycler_books.view.*
 
 
 class RvAdapterParent(private val userList: ArrayList<ModelParent>) : RecyclerView.Adapter<RvAdapterParent.ViewHolder>() {
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -24,11 +29,16 @@ class RvAdapterParent(private val userList: ArrayList<ModelParent>) : RecyclerVi
     override fun onBindViewHolder(holder: RvAdapterParent.ViewHolder, position: Int) {
 
         holder.name?.text = userList[position].name
+        holder.recyclerView.apply { layoutManager = LinearLayoutManager(holder.recyclerView.context, LinearLayout.HORIZONTAL, false)
+        adapter = RvAdapterChild(userList[position].children)
+
+        }
 
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name = itemView.findViewById<TextView>(R.id.textView)
+        val recyclerView : RecyclerView = itemView.rv_child
 
     }
 }

@@ -1,46 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cart_view"
-    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
     app:cardCornerRadius="4dp"
-    android:layout_gravity="center">
-    
+    app:cardElevation="4dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/sectionOfBook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
             <TextView
                 android:id="@+id/textView"
-                android:layout_weight="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FirstCategory"/>
-            
+                android:layout_weight="5"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="FirstCategory"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
             <ImageView
-                android:layout_weight="1"
                 android:layout_width="10dp"
                 android:layout_height="20dp"
-                android:src="@drawable/arr_b"/>
-            
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:src="@drawable/arr_b" />
+
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_child"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rv_child"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
-            android:padding="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp"/>
+            android:padding="20dp" />
 
     </RelativeLayout>
 
