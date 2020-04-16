@@ -115,4 +115,25 @@
     <string name="dummy_date" translatable="false">День-Рік-Місяць-Година</string>
      <string name="share_note_chooser_dialog_title">Поділитися нотаткою за допомогою</string>
 
+    <!-- Books resources-->
+
+    <string name="name_of_book_S1B1">Загальна екологія. Навчальний посібник</string>
+    <string name="name_of_book_S1B2">Основи екології</string>
+    <string name="name_of_book_S1B3">Екологія та охорона навколишнього природного середовища</string>
+    <string name="name_of_book_S1B4">Основи екології</string>
+    <string name="name_of_book_S1B5">Загальна екологія. Природні наземні екосистеми</string>
+    <string name="name_of_book_S1B6">Загальна екологія</string>
+    <string name="name_of_book_S1B7">Загальна і медецинська екологія</string>
+
+    <string-array name="section_one">
+        <item>Red Line</item>
+        <item>Blue Line</item>
+        <item>Orange Line</item>
+        <item>Green Line</item>
+        <item>Brown Line</item>
+        <item>Purple Line</item>
+        <item>Pink Line</item>
+        <item>Yellow Line</item>
+    </string-array>
+
 </resources>
