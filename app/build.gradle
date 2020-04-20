@@ -114,6 +114,11 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+
+
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+
 }
 apply plugin: 'com.google.gms.google-services'
 repositories {
