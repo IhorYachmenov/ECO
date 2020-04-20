@@ -1,20 +1,22 @@
 package com.example.eco.book
 
-import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eco.R
+import com.example.eco.main_category.CategoryActivity
+import kotlinx.android.synthetic.main.parent_recycler_books.*
+import org.w3c.dom.Text
 
 
 class BookMainActivity : AppCompatActivity() {
 
-    private lateinit var section : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +24,7 @@ class BookMainActivity : AppCompatActivity() {
 
         initParentRV()
 
-        //section = findViewById(R.id.sec)
+
 
 
     }
@@ -62,6 +64,10 @@ class BookMainActivity : AppCompatActivity() {
         val rvAdapter = RvAdapterParent(dataList)
         recyclerView.adapter = rvAdapter
 
+    }
+
+    companion object {
+        lateinit var modelArrayList: ArrayList<ModelParent>
     }
 
 }

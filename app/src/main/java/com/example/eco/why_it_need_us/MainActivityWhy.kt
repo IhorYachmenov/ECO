@@ -1,14 +1,12 @@
-package com.example.eco.book
+package com.example.eco.why_it_need_us
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eco.R
 
-class ActivityMainListOfBook : AppCompatActivity() {
-
+class MainActivityWhy : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_of_all_book)
-
+        setContentView(R.layout.activity_main_why)
     }
 }

@@ -110,6 +110,14 @@
 
         </activity>
 
+        <!-- Why it ts Activity-->
+
+        <activity
+            android:name=".why_it_need_us.MainActivityWhy"
+            android:label="@string/app_name"
+            android:parentActivityName=".main_category.CategoryActivity">
+        </activity>
+
 
     </application>
 

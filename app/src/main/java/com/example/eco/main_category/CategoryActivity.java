@@ -18,6 +18,7 @@ import com.example.eco.ecologists.EcologistsActivity;
 
 
 import com.example.eco.other.NotesMainActivity;
+import com.example.eco.why_it_need_us.MainActivityWhy;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -63,6 +64,8 @@ public class CategoryActivity extends AppCompatActivity {
                     Intent ecologyActivity = new Intent(view.getContext(), AllAboutEcology.class);
                     startActivity(ecologyActivity);
                 } else if (position == 1){
+                    Intent whyItUsActivity = new Intent(view.getContext(), MainActivityWhy.class);
+                    startActivity(whyItUsActivity);
 
                 }
                 else if (position == 2){

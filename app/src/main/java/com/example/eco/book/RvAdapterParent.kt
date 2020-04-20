@@ -1,5 +1,6 @@
 package com.example.eco.book
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +13,6 @@ import kotlinx.android.synthetic.main.parent_recycler_books.view.*
 
 
 class RvAdapterParent(private val userList: ArrayList<ModelParent>) : RecyclerView.Adapter<RvAdapterParent.ViewHolder>() {
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -36,9 +35,22 @@ class RvAdapterParent(private val userList: ArrayList<ModelParent>) : RecyclerVi
 
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name = itemView.findViewById<TextView>(R.id.textView)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        val name: TextView = itemView.findViewById(R.id.textView)
         val recyclerView : RecyclerView = itemView.rv_child
 
+        //, View.OnClickListener
+//        init {
+//            name.setOnClickListener(this)
+//        }
+//
+//        override fun onClick(v: View) {
+//            TODO("Not yet implemented")
+//
+//        }
+
     }
+
+
+
 }
