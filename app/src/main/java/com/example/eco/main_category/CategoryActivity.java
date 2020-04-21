@@ -17,6 +17,7 @@ import com.example.eco.chat_button.SignInActivity;
 import com.example.eco.ecologists.EcologistsActivity;
 
 
+import com.example.eco.how_we_can_help.ActivityMainHelp;
 import com.example.eco.other.NotesMainActivity;
 import com.example.eco.why_it_need_us.MainActivityWhy;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -66,11 +67,11 @@ public class CategoryActivity extends AppCompatActivity {
                 } else if (position == 1){
                     Intent whyItUsActivity = new Intent(view.getContext(), MainActivityWhy.class);
                     startActivity(whyItUsActivity);
-
                 }
                 else if (position == 2){
-
-                }
+                    Intent goToHowWeCanHelp = new Intent(view.getContext(), ActivityMainHelp.class);
+                    startActivity(goToHowWeCanHelp);
+                                    }
                 else if (position == 3){
                     Intent booksActivity = new Intent(view.getContext(), BookMainActivity.class);
                     startActivity(booksActivity);
@@ -78,13 +79,11 @@ public class CategoryActivity extends AppCompatActivity {
                 else if (position == 4){
                     Intent scientistsActivity = new Intent(view.getContext(), EcologistsActivity.class);
                     startActivity(scientistsActivity);
-
                 }
                 else if (position == 5){
                     Intent notesActivity = new Intent(view.getContext(), NotesMainActivity.class);
                     startActivity(notesActivity);
                 }
-
 
             }
         });
