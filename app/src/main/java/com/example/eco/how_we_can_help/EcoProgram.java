@@ -9,12 +9,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.eco.R;
+import com.github.barteksc.pdfviewer.PDFView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class EcoProgram extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private WebView webview;
+    private PDFView pdfView;
 
 
     @Override
@@ -24,9 +26,12 @@ public class EcoProgram extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        webview = (WebView) findViewById(R.id.web_view);
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.loadUrl("https://docs.google.com/viewer?url=https://gp.org.ua/images/reports/eco_program.pdf");
+//        webview = (WebView) findViewById(R.id.web_view);
+//        webview.getSettings().setJavaScriptEnabled(true);
+//        webview.loadUrl("https://docs.google.com/viewer?url=https://gp.org.ua/images/reports/eco_program.pdf");
+
+        pdfView = findViewById(R.id.pdfView);
+        pdfView.fromAsset("eco_program.pdf").load();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
