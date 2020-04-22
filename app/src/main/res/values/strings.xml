@@ -167,4 +167,9 @@
         щось змінити: наприклад, припинити витрачати сировинні ресурси і прагнути до економічного зростання будь-якою ціною.
     </string>
 
+
+    <!-- How we can help -->
+
+    <string name="how_we_can_help">Як ми можем допомогти</string>
+    <string name="eco_program">ЕКО програма</string>
 </resources>
