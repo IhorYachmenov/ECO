@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.eco.R;
 import com.example.eco.all_about_ecology.AllAboutEcology;
 import com.example.eco.book.BookMainActivity;
@@ -98,6 +100,8 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(goToEcoChat);
             }
         });
+
+        YoYo.with(Techniques.Bounce).repeat(9999).playOn(findViewById(R.id.floating_action_button));
 
     }
 

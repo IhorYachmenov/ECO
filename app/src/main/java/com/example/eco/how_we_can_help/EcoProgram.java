@@ -3,9 +3,7 @@ package com.example.eco.how_we_can_help;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

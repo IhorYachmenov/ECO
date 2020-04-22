@@ -114,10 +114,12 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-
-
-
+    // Need for section What is ecology
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+
+    //Animation for How we can help.
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
 
 }
 apply plugin: 'com.google.gms.google-services'
