@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +22,8 @@ public class ActivityMainHelp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_how_we_can_help);
 
+        getSupportActionBar().hide();
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
 
@@ -35,6 +38,9 @@ public class ActivityMainHelp extends AppCompatActivity {
                     case R.id.action_program:
                         startActivity(new Intent(getApplicationContext(), EcoProgram.class));
                         overridePendingTransition(0,0);
+
+
+
                         return true;
                 }
 
