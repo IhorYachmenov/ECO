@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
@@ -46,6 +47,8 @@ public class AllAboutEcology extends AppCompatActivity {
     public static Button retryButton;
 
     public static Button moreInfo;
+    private static FetchData process;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +62,21 @@ public class AllAboutEcology extends AppCompatActivity {
         retryButton = (Button) findViewById(R.id.retry_button);
         moreInfo = (Button) findViewById(R.id.button_more_info);
 
-        final FetchData process = new FetchData();
+        process = new FetchData();
+
+
+
+        moreInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Convert the String URL into a URI object (to pass into the Intent constructor)
+                Uri wikiUri = Uri.parse(URL_WebSite);
+                // Create a new intent to view the earthquake URI
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, wikiUri);
+                startActivity(websiteIntent);
+            }
+        });
 
         if (checkConnection()){
             process.execute();
@@ -90,20 +107,6 @@ public class AllAboutEcology extends AppCompatActivity {
                 }
             });
         }
-
-        moreInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri wikiUri = Uri.parse(URL_WebSite);
-                // Create a new intent to view the earthquake URI
-                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, wikiUri);
-                startActivity(websiteIntent);
-            }
-        });
-
-
 
     }
 

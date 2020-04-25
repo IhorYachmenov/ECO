@@ -3,9 +3,15 @@ package com.example.eco.how_we_can_help;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 import com.example.eco.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -13,12 +19,11 @@ public class ActivityMainHelp extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_how_we_can_help);
-
-        getSupportActionBar().hide();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
@@ -35,15 +40,17 @@ public class ActivityMainHelp extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), EcoProgram.class));
                         overridePendingTransition(0,0);
 
-
-
                         return true;
                 }
-
 
                 return false;
             }
         });
 
+
+
     }
+
+
 }
+

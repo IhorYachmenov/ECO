@@ -24,8 +24,6 @@ public class EcoProgram extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eco_program);
 
-        getSupportActionBar().hide();
-
 //        webview = (WebView) findViewById(R.id.web_view);
 //        webview.getSettings().setJavaScriptEnabled(true);
 //        webview.loadUrl("https://docs.google.com/viewer?url=https://gp.org.ua/images/reports/eco_program.pdf");
